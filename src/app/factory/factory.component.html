@@ -1,0 +1,40 @@
+<main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
+  <div *ngIf='factory'>
+    <h1>Factory Form</h1>
+    <form #factoryForm="ngForm">
+      <div class="row">
+        <div class="form-group col-4">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" required [(ngModel)]="factory.name" name="name">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-4">
+          <label for="availability">Availability</label>
+          <input type="text" class="form-control" id="availability" required [(ngModel)]="factory.availability" name="availability">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-4">
+          <label for="performance">Performance</label>
+          <input type="text" class="form-control" id="performance" required [(ngModel)]="factory.performance" name="performance">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-4">
+          <label for="quality">Quality</label>
+          <input type="text" class="form-control" id="quality" required [(ngModel)]="factory.quality" name="quality">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-4">
+          <label for="oee">OEE</label>
+          <input type="text" class="form-control" id="oee" readonly [value]="factory.getOveralEquipmentEffectiveness() | percent" name="oee">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-success" (click)="saveFactory()">Save</button>
+
+    </form>
+
+  </div>
+</main>

@@ -2,19 +2,41 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { NebbHeaderComponentComponent } from './nebb-header-component/nebb-header-component.component';
-import { NebbLeftMenuComponentComponent } from './nebb-left-menu-component/nebb-left-menu-component.component';
+import { HeaderComponent } from './header/header.component';
+import { LeftMenuComponent } from './left-menu/left-menu.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { FooterComponent } from './footer/footer.component';
+import { DashboardItemComponent } from './dashboard-item/dashboard-item.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { FactoryComponent } from './factory/factory.component';
+import { FactoriesComponent } from './factories/factories.component';
+import { FactoryService } from './factory.service';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule, ToastNoAnimationModule, ToastNoAnimation } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NebbHeaderComponentComponent,
-    NebbLeftMenuComponentComponent
+    HeaderComponent,
+    LeftMenuComponent,
+    DashboardComponent,
+    FooterComponent,
+    DashboardItemComponent,
+    FactoryComponent,
+    FactoriesComponent
   ],
   imports: [
-    BrowserModule
+    ToastNoAnimationModule,
+    ToastrModule.forRoot({
+      toastComponent: ToastNoAnimation,
+    }),
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [FactoryService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Tesla Factory",
+    "availability": 0.67,
+    "performance": 0.67,
+    "quality": 1
+  },
+  {
+    "id": 2,
+    "name": "Gigafactory 1",
+    "availability": 1,
+    "performance": 0.9,
+    "quality": 1
+  },
+  {
+    "id": 3,
+    "name": "Gigafactory 2",
+    "availability": 0.67,
+    "performance": 0.9,
+    "quality": 1
+  },
+  {
+    "id": 3,
+    "name": "Tilburg Factory",
+    "availability": 1,
+    "performance": 1,
+    "quality": 1
+  }
+]

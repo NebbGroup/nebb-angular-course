@@ -1,0 +1,20 @@
+<div class="imgcontainer">
+  <img [src]=setImageColor() width="200" height="200" class="img-fluid rounded-circle" [alt]="factory.name">
+  <div class="centered">OEE: {{factory.getOveralEquipmentEffectiveness() | percent}}</div>
+</div>
+<h4>{{factory.name}}</h4>
+<br />
+<div class="progress">
+  <div class="progress-bar" [ngClass]=setClass(factory.performance) role="progressbar" [style.width]="factory.performance | percent"
+    [attr.aria-valuenow]="factory.performance * 100" aria-valuemin="0" aria-valuemax="100">Performance: {{factory.performance | percent}}</div>
+</div>
+<br />
+<div class="progress">
+  <div class="progress-bar" [ngClass]=setClass(factory.availability) role="progressbar" [style.width]="factory.availability | percent"
+    [attr.aria-valuenow]="factory.availability * 100" aria-valuemin="0" aria-valuemax="100">Availability: {{factory.availability | percent}}</div>
+</div>
+<br />
+<div class="progress">
+  <div class="progress-bar" [ngClass]=setClass(factory.quality) role="progressbar" [style.width]="factory.quality | percent"
+    [attr.aria-valuenow]="factory.quality * 100" aria-valuemin="0" aria-valuemax="100">Quality: {{factory.quality | percent}}</div>
+</div>

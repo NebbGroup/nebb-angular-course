@@ -1,52 +1,6 @@
-<nebb-header-component></nebb-header-component>
+<nebb-header></nebb-header>
 <div class="container-fluid">
-  <div class="row">
-    <nebb-left-menu-component></nebb-left-menu-component>
-    <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
-      <h1>Dashboard</h1>
-      <section class="row text-center placeholders">
-        <div class="col-6 col-sm-3 placeholder">
-          <img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPUWO76HwAEKAIVAM7kFgAAAABJRU5ErkJggg==" width="200" height="200" class="img-fluid rounded-circle"
-            alt="Generic placeholder thumbnail">
-          <h4>Steel Factory</h4>
-          <span class="text-muted">Location: Norway</span>
-          <br />
-          <div class="progress">
-            <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">OEE: 85%</div>
-          </div>
-          <span class="text-muted">Last Control: 15.05.2018</span>
-        </div>
-        <div class="col-6 col-sm-3 placeholder">
-          <img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8f5D9PwAHVgLIdb20nwAAAABJRU5ErkJggg==" width="200" height="200" class="img-fluid rounded-circle"
-            alt="Generic placeholder thumbnail">
-          <h4>Aluminium Factory</h4>
-          <span class="text-muted">Location: Norway</span>
-          <div class="progress">
-            <div class="progress-bar bg-warning" role="progressbar" style="width: 55%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">OEE: 55%</div>
-          </div>
-          <span class="text-muted">Last Control: 26.05.2018</span>
-        </div>
-        <div class="col-6 col-sm-3 placeholder">
-          <img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPUWO76HwAEKAIVAM7kFgAAAABJRU5ErkJggg==" width="200" height="200" class="img-fluid rounded-circle"
-            alt="Generic placeholder thumbnail">
-          <h4>Copper Factory</h4>
-          <span class="text-muted">Location: China</span>
-          <div class="progress">
-            <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">OEE: 85%</div>
-          </div>
-          <span class="text-muted">Last Control: 15.05.2018</span>
-        </div>
-        <div class="col-6 col-sm-3 placeholder">
-          <img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO8Y+r6HwAFogJXJhwp6AAAAABJRU5ErkJggg==" width="200" height="200" class="img-fluid rounded-circle"
-            alt="Generic placeholder thumbnail">
-          <h4>Factory Location #4</h4>
-          <span class="text-muted">Location: China</span>
-          <div class="progress">
-            <div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">OEE: 25%</div>
-          </div>
-          <span class="text-muted">Last Control: 26.06.2018</span>
-        </div>
-      </section>
-    </main>
-  </div>
+    <nebb-left-menu></nebb-left-menu>
+    <router-outlet></router-outlet>
 </div>
+<nebb-footer></nebb-footer>
