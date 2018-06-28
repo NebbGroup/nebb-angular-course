@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Factory } from '../factory';
 import { FactoryService } from '../factory.service';
 import { QueryOptions } from '../query-options';
@@ -10,7 +10,7 @@ import { QueryOptions } from '../query-options';
 })
 export class DashboardComponent implements OnInit {
 
-  @Input() factories: Factory[];
+  factories: Factory[];
   constructor(private factoryService: FactoryService) { }
 
   ngOnInit() {

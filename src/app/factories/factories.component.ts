@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Factory } from '../factory';
 import { FactoryService } from '../factory.service';
 import { QueryOptions } from '../query-options';
@@ -9,9 +9,8 @@ import { QueryOptions } from '../query-options';
   styleUrls: ['./factories.component.scss']
 })
 export class FactoriesComponent implements OnInit {
-
-  @Input() factories: Factory[];
-  constructor(private factoryService: FactoryService) { }
+  factories: Factory[];
+  constructor(private factoryService: FactoryService) {}
 
   ngOnInit() {
     this.factories = [];
@@ -21,5 +20,4 @@ export class FactoriesComponent implements OnInit {
       }
     });
   }
-
 }

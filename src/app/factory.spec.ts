@@ -6,7 +6,7 @@ describe('Factory', () => {
   });
 
   it('should accept values in the constructor and return correct OEE == 1', () => {
-    let factory = new Factory({
+    const factory = new Factory({
       id: 1,
       title: 'Steel Factory',
       availability: 1,
@@ -16,7 +16,7 @@ describe('Factory', () => {
   });
 
   it('should accept values in the constructor and return correct OEE = 0.3', () => {
-    let factory = new Factory({
+    const factory = new Factory({
       id: 1,
       title: 'Steel Factory',
       availability: 1,
@@ -26,7 +26,7 @@ describe('Factory', () => {
   });
 
   it('should accept values in the constructor and return correct OEE = 0.09', () => {
-    let factory = new Factory({
+    const factory = new Factory({
       id: 1,
       title: 'Steel Factory',
       availability: 1,

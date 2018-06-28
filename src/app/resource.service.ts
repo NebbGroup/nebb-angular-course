@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+import { Observable, of, empty } from 'rxjs';
 import { Resource } from './resource';
 import { Serializer } from './serializer';
 import { catchError, tap } from 'rxjs/operators';
@@ -36,19 +36,18 @@ export class ResourceService<T extends Resource> {
     return this.httpClient
       .get<T[]>(`${this.url}/${this.endpoint}?${queryOptions.toQueryString()}`)
       .pipe(
-        tap(t => this.log(`fetched data`)),
-        catchError(this.handleError('list', []))
+        tap(t => this.log(`fetched data`))
       );
   }
 
   delete(id: number) {
     return this.httpClient.delete(`${this.url}/${this.endpoint}/${id}`).pipe(
       tap(t => this.log(`fetched data`)),
-      catchError(this.handleError('delete', []))
+      catchError(this.handleError('delete'))
     );
   }
 
-  private handleError<T>(operation = 'operation', result?: T) {
+  private handleError(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error);
       this.log(`${operation} failed: ${error.message}`);

@@ -22,7 +22,7 @@ export class FactoryComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
+    this.route.params['id'].subscribe(params => {
       const id = +params['id'];
       this.factoryService
         .get(id)
@@ -33,7 +33,8 @@ export class FactoryComponent implements OnInit {
   saveFactory() {
     this.factoryService.update(this.factory).subscribe(factory => {
       this.success(factory);
-    });
+    },
+    error => console.log(error));
   }
 
   private success(factory: Factory): Observable<any> {

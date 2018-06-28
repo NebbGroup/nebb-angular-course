@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Factory } from '../factory';
 
 @Component({
@@ -7,13 +7,11 @@ import { Factory } from '../factory';
   styleUrls: ['./dashboard-item.component.scss']
 })
 export class DashboardItemComponent implements OnInit {
-
   @Input() factory: Factory;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   setClass(parameter: number) {
     if (parameter > 0.66) {
@@ -34,5 +32,4 @@ export class DashboardItemComponent implements OnInit {
     }
     return 'data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO8Y+r6HwAFogJXJhwp6AAAAABJRU5ErkJggg==';
   }
-
 }

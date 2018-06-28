@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FactoryComponent } from './factory/factory.component';
 import { FactoriesComponent } from './factories/factories.component';
+import { DashboardItemComponent } from './dashboard-item/dashboard-item.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -17,3 +18,5 @@ const routes: Routes = [
   declarations: []
 })
 export class AppRoutingModule { }
+
+export const routableComponents = [DashboardComponent, DashboardItemComponent, FactoryComponent, FactoriesComponent];
