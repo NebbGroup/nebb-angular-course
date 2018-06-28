@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
-import { Observable, of, empty } from 'rxjs';
-import { Resource } from './resource';
+import { Observable, of } from 'rxjs';
 import { Serializer } from './serializer';
 import { catchError, tap } from 'rxjs/operators';
 import { QueryOptions } from './query-options';
+import { Resource } from '../models/resource.model';
 
 export class ResourceService<T extends Resource> {
   constructor(

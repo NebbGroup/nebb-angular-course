@@ -1,4 +1,5 @@
-import { Resource } from './resource';
+import { Resource } from '../models/resource.model';
+
 
 export interface Serializer {
   fromJson(json: any): Resource;

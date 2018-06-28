@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Factory } from '../factory';
+import { Component, OnInit, Input } from '@angular/core';
+import { Factory } from '../../models/factory.model';
+
 
 @Component({
   selector: 'nebb-dashboard-item',

@@ -1,22 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { FactoryComponent } from './factory/factory.component';
-import { FactoriesComponent } from './factories/factories.component';
-import { DashboardItemComponent } from './dashboard-item/dashboard-item.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'factory/:id', component: FactoryComponent },
-  { path: 'factories', component: FactoriesComponent }
+  { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
+  { path: 'factories', loadChildren: './factories/factories.module#FactoriesModule'},
+  { path: '**', redirectTo: '/dashboard', pathMatch: 'full' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-  declarations: []
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
-export const routableComponents = [DashboardComponent, DashboardItemComponent, FactoryComponent, FactoriesComponent];

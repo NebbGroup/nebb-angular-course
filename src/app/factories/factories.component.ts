@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Factory } from '../factory';
-import { FactoryService } from '../factory.service';
-import { QueryOptions } from '../query-options';
+import { Factory } from '../models/factory.model';
+import { FactoryService } from '../core/factory.service';
+import { QueryOptions } from '../core/query-options';
 
 @Component({
   selector: 'nebb-factories',

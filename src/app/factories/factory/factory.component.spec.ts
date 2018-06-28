@@ -9,7 +9,7 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
 import { FactoriesComponent } from '../factories/factories.component';
 import { routableComponents } from '../app-routing.module';
 import { of } from 'rxjs';
-import { Factory } from '../factory';
+import { Factory } from '../models/factory.model';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },

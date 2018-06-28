@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DashboardComponent } from './dashboard.component';
-import { DashboardItemComponent } from '../dashboard-item/dashboard-item.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardItemComponent } from './dashboard-item/dashboard-item.component';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;

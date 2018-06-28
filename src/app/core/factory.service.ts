@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Factory } from './factory';
 import { ResourceService } from './resource.service';
+import { Factory } from '../models/factory.model';
 import { HttpClient } from '@angular/common/http';
 import { FactorySerializer } from './factory-serializer';
-import { environment } from './../environments/environment';
+import { environment } from '../../environments/environment';
+import { CoreModule } from './core.module';
+
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: CoreModule
 })
 export class FactoryService extends ResourceService<Factory> {
   constructor(httpClient: HttpClient) {

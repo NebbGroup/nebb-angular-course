@@ -1,15 +1,15 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { LeftMenuComponent } from './left-menu/left-menu.component';
-import { AppRoutingModule, routableComponents } from './app-routing.module';
+import { NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { FactoryService } from './factory.service';
+import { FactoryService } from './core/factory.service';
+import { HeaderComponent } from './core/header/header.component';
+import { FooterComponent } from './core/footer/footer.component';
+import { LeftMenuComponent } from './core/left-menu/left-menu.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -18,7 +18,7 @@ describe('AppComponent', () => {
         FormsModule, AppRoutingModule, RouterModule, HttpClientModule
       ],
       declarations: [
-        AppComponent, HeaderComponent, FooterComponent, LeftMenuComponent, routableComponents
+        AppComponent, HeaderComponent, FooterComponent, LeftMenuComponent
       ],
       providers: [{provide: APP_BASE_HREF, useValue : '/' }, FactoryService],
       schemas: [

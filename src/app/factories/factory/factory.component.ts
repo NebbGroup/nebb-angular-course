@@ -1,10 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Factory } from '../factory';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FactoryService } from '../factory.service';
 import { ToastrService } from 'ngx-toastr';
 import { Observable, of } from 'rxjs';
 import { delay } from 'rxjs/operators';
+import { Factory } from '../../models/factory.model';
+import { FactoryService } from '../../core/factory.service';
 
 @Component({
   selector: 'nebb-factory-component',

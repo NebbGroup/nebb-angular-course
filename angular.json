@@ -77,6 +77,9 @@
           "configurations": {
             "production": {
               "browserTarget": "nebb-angular-course:build:production"
+            },
+            "staging": {
+              "browserTarget": "nebb-angular-course:build:staging"
             }
           }
         },
@@ -130,6 +133,9 @@
           "configurations": {
             "production": {
               "devServerTarget": "nebb-angular-course:serve:production"
+            },
+            "staging": {
+              "devServerTarget": "nebb-angular-course:serve:staging"
             }
           }
         },

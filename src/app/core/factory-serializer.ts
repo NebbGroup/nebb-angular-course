@@ -1,5 +1,7 @@
-import { Factory } from './factory';
 import { Serializer } from './serializer';
+import { Factory } from '../models/factory.model';
+
+
 
 export class FactorySerializer implements Serializer {
   fromJson(json: any): Factory {
