@@ -149,6 +149,86 @@
           }
         }
       }
+    },
+    "nebb-rest-service": {
+      "root": "projects/nebb-rest-service",
+      "sourceRoot": "projects/nebb-rest-service/src",
+      "projectType": "library",
+      "prefix": "nebb",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/nebb-rest-service/tsconfig.lib.json",
+            "project": "projects/nebb-rest-service/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/nebb-rest-service/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/nebb-rest-service/src/test.ts",
+            "tsConfig": "projects/nebb-rest-service/tsconfig.spec.json",
+            "karmaConfig": "projects/nebb-rest-service/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/nebb-rest-service/tsconfig.lib.json",
+              "projects/nebb-rest-service/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "nebb-oee-status": {
+      "root": "projects/nebb-oee-status",
+      "sourceRoot": "projects/nebb-oee-status/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/nebb-oee-status/tsconfig.lib.json",
+            "project": "projects/nebb-oee-status/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/nebb-oee-status/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/nebb-oee-status/src/test.ts",
+            "tsConfig": "projects/nebb-oee-status/tsconfig.spec.json",
+            "karmaConfig": "projects/nebb-oee-status/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/nebb-oee-status/tsconfig.lib.json",
+              "projects/nebb-oee-status/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "nebb-angular-course"

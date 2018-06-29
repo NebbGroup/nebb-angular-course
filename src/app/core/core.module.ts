@@ -5,24 +5,27 @@ import { RouterModule } from '@angular/router';
 
 import { throwIfAlreadyLoaded } from './module-import-guard';
 
-import { FactoryService } from './factory.service';
-
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { LeftMenuComponent } from './left-menu/left-menu.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SelectivePreloadingStrategy } from './selective-preload-strategy';
+import { SharedModule } from '../shared/shared.module';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ],
   exports: [
     CommonModule, FormsModule, RouterModule, FooterComponent, HeaderComponent, LeftMenuComponent
   ],
-  declarations: [ FooterComponent, HeaderComponent, LeftMenuComponent]
+  declarations: [ FooterComponent, HeaderComponent, LeftMenuComponent],
+  providers: [SelectivePreloadingStrategy]
 })
 export class CoreModule {
   constructor( @Optional() @SkipSelf() parentModule: CoreModule) {

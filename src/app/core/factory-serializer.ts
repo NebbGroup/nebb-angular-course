@@ -1,17 +1,16 @@
-import { Serializer } from './serializer';
 import { Factory } from '../models/factory.model';
-
-
+import { Serializer } from 'nebb-rest-service';
 
 export class FactorySerializer implements Serializer {
   fromJson(json: any): Factory {
     console.log('test');
     const factory = new Factory({
-    id: json.id,
-    name: json.name,
-    availability: json.availability,
-    performance: json.performance,
-    quality: json.quality});
+      id: json.id,
+      name: json.name,
+      availability: json.availability,
+      performance: json.performance,
+      quality: json.quality
+    });
     return factory;
   }
 

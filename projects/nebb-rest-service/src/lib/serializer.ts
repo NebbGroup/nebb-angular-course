@@ -1,4 +1,4 @@
-import { Resource } from '../models/resource.model';
+import { Resource } from './resource.model';
 
 
 export interface Serializer {

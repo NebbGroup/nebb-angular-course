@@ -1,0 +1,12 @@
+<form #factoryForm="ngForm">
+  <div class="form-group">
+    <label for="factoryId">Factory Id</label>
+    <input type="text" class="form-control" id="factoryId" placeholder="Enter Factory Id" [(ngModel)]="factoryId"  name="factoryId">
+  </div>
+  <div class="form-group">
+    <label for="factoryOee">Factory OEE</label>
+    <input type="text" class="form-control" disabled id="factoryOee" [value]="factoryOee | percent">
+  </div>
+  <div class="float-left"><button type="button" class="btn btn-primary btn-sm btn-rounded" (click)="getOee()">Get OEE</button></div>
+  <div class="float-right"><button type="button" class="btn btn-danger btn-sm btn-rounded" (click)="clear()">Clear</button></div>
+</form>

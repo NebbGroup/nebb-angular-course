@@ -15,6 +15,20 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "nebb-rest-service": [
+        "dist/nebb-rest-service"
+      ],
+      "nebb-rest-service/*": [
+        "dist/nebb-rest-service/*"
+      ],
+      "nebb-oee-status": [
+        "dist/nebb-oee-status"
+      ],
+      "nebb-oee-status/*": [
+        "dist/nebb-oee-status/*"
+      ]
+    }
   }
 }
