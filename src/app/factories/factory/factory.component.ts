@@ -22,7 +22,7 @@ export class FactoryComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.route.params['id'].subscribe(params => {
+    this.route.params.subscribe(params => {
       const id = +params['id'];
       this.factoryService
         .get(id)

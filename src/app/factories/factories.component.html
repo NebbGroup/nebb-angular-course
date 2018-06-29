@@ -1,5 +1,5 @@
 <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
-  <h1>Factories</h1>
+  <h1>{{'Factories' | i18n}}</h1>
   <table class="table table-striped">
     <thead>
       <tr>
@@ -20,7 +20,7 @@
         <td>{{factory.performance | percent}}</td>
         <td>{{factory.quality | percent}}</td>
         <td>{{factory.getOveralEquipmentEffectiveness() | percent}}</td>
-        <td><a class="nav-link" [routerLink]="['/factory/' + factory.id]"><button type="button" class="btn btn-primary btn-rounded btn-sm">Edit</button></a></td>
+        <td><a class="nav-link" [routerLink]="['/factories/' + factory.id]"><button type="button" class="btn btn-primary btn-rounded btn-sm">Edit</button></a></td>
       </tr>
     </tbody>
   </table>

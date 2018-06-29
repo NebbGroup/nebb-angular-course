@@ -13,8 +13,7 @@ const routes: Routes = [
     path: 'factories',
     loadChildren: './factories/factories.module#FactoriesModule',
     data: { preload: true }
-  },
-  { path: '**', redirectTo: '/dashboard', pathMatch: 'full' },
+  }
 ];
 
 @NgModule({

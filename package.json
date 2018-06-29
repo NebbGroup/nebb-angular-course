@@ -24,9 +24,11 @@
     "bootstrap": "^4.1.1",
     "core-js": "^2.5.4",
     "intl": "^1.2.5",
+    "jquery": "^3.3.1",
     "nebb-oee-status": "0.0.1",
     "nebb-rest-service": "file:dist/nebb-rest-service",
     "ngx-toastr": "^8.8.0",
+    "popper.js": "^1.14.3",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },
