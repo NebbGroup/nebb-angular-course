@@ -10,4 +10,4 @@ import { I18nModule } from './i18n/i18n.module';
   imports: [CommonModule, FormsModule, NebbRestServiceModule, NebbOeeStatusModule, I18nModule],
   exports: [CommonModule, FormsModule, NebbRestServiceModule, NebbOeeStatusModule, I18nModule]
 })
-export class SharedModule { }
+export class SharedModule {  constructor() {console.log('shared cons'); } }

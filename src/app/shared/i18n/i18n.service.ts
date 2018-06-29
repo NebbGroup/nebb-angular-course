@@ -3,7 +3,9 @@ import { languages } from './languages.model';
 import { Subject, Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class I18nService {
   public state;
   public data: {};
@@ -25,9 +27,7 @@ export class I18nService {
   }
 
   constructor(private httpClient: HttpClient, private ref: ApplicationRef) {
-    console.log(Date.now());
     this.state = new Subject();
-
     this.initLanguage(this.defaultLocale || 'gb');
     this.fetch(this.currentLanguage.key);
   }

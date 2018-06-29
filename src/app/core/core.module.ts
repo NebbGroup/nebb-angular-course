@@ -1,5 +1,4 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
@@ -12,17 +11,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { SelectivePreloadingStrategy } from './selective-preload-strategy';
 import { SharedModule } from '../shared/shared.module';
 
-
 @NgModule({
   imports: [
-    CommonModule,
     FormsModule,
     RouterModule,
     HttpClientModule,
     SharedModule
   ],
   exports: [
-    CommonModule, FormsModule, RouterModule, FooterComponent, HeaderComponent, LeftMenuComponent
+    FormsModule, RouterModule, FooterComponent, HeaderComponent, LeftMenuComponent
   ],
   declarations: [ FooterComponent, HeaderComponent, LeftMenuComponent],
   providers: [SelectivePreloadingStrategy]

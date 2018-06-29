@@ -13,8 +13,9 @@ import { I18nService } from './i18n.service';
     LanguageSelectorComponent,
     I18nPipe
   ],
-  exports: [LanguageSelectorComponent, I18nPipe],
-  providers: [I18nService]
+  exports: [LanguageSelectorComponent, I18nPipe]
 
 })
-export class I18nModule {}
+export class I18nModule {
+  constructor() {console.log('cons'); }
+}
