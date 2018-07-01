@@ -1,7 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterModule } from '@angular/router';
 import { FactoriesComponent } from './factories.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FactoryService } from '../factory.service';
+import { FactoryMockService } from '../factory.mock.service';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('FactoriesComponent', () => {
   let component: FactoriesComponent;
@@ -10,11 +12,16 @@ describe('FactoriesComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterModule, HttpClientModule
+        RouterTestingModule, HttpClientModule
       ],
-      declarations: [ FactoriesComponent ]
+      declarations: [FactoriesComponent],
+      providers: [
+        {
+          provide: FactoryService,
+          useClass: FactoryMockService
+        }]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -25,5 +32,9 @@ describe('FactoriesComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should have empty list of factories before oninit', () => {
+    expect(component.factories.length).toBe(1);
   });
 });

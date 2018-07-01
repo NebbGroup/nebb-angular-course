@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'factories', component: FactoriesComponent }
 ];
 
-describe('FactoryComponent', () => {
+/*describe('FactoryComponent', () => {
   let component: FactoryComponent;
   let fixture: ComponentFixture<FactoryComponent>;
 
@@ -49,4 +49,4 @@ describe('FactoryComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-});
+});*/
