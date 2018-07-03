@@ -13,7 +13,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let factory of factories">
+      <tr *ngFor="let factory of factories ">
         <th scope="row">{{factory.id}}</th>
         <td>{{factory.name}}</td>
         <td>{{factory.availability | percent}}</td>
@@ -21,6 +21,7 @@
         <td>{{factory.quality | percent}}</td>
         <td>{{factory.getOveralEquipmentEffectiveness() | percent}}</td>
         <td><a class="nav-link" [routerLink]="['/factory/' + factory.id]"><button type="button" class="btn btn-primary btn-rounded btn-sm">Edit</button></a></td>
+
       </tr>
     </tbody>
   </table>

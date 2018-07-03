@@ -4,7 +4,8 @@ import { FooterComponent } from './footer/footer.component';
 @Component({
   selector: 'nebb-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  providers: []
 })
 export class AppComponent implements AfterViewInit {
 

@@ -15,11 +15,7 @@ describe('FactoriesComponent', () => {
         RouterTestingModule, HttpClientModule
       ],
       declarations: [FactoriesComponent],
-      providers: [
-        {
-          provide: FactoryService,
-          useClass: FactoryMockService
-        }]
+      providers: [FactoryService]
     })
       .compileComponents();
   }));

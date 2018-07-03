@@ -3,12 +3,14 @@ import { Factory } from '../factory';
 import { FactoryService } from '../factory.service';
 import { QueryOptions } from '../query-options';
 
+
 @Component({
   selector: 'nebb-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.scss'],
+  providers: [ ]
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit  {
 
   factories: Factory[];
   constructor(private factoryService: FactoryService) { }

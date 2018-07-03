@@ -34,4 +34,5 @@ describe('Factory', () => {
       quality: 0.3});
       expect(factory.getOveralEquipmentEffectiveness()).toEqual(0.09);
   });
+
 });

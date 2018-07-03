@@ -12,6 +12,8 @@ import { LeftMenuComponent } from './left-menu/left-menu.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { FactoryService } from './factory.service';
+import { ExampleComponent } from './example/example.component';
+import { FactoryItemComponent } from './factory-item/factory-item.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { FactoryService } from './factory.service';
     HeaderComponent,
     LeftMenuComponent,
     FooterComponent,
-    routableComponents
+    routableComponents,
+    ExampleComponent,
+    FactoryItemComponent
   ],
   imports: [
     ToastNoAnimationModule,
@@ -31,7 +35,7 @@ import { FactoryService } from './factory.service';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [FactoryService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
