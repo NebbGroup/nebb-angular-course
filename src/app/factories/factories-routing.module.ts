@@ -2,12 +2,18 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FactoriesComponent } from './factories.component';
 import { FactoryComponent } from './factory/factory.component';
+import { FactoryListComponent } from './factory-list/factory-list.component';
+
 
 const routes: Routes = [
   {
     path: '',
-    component: FactoriesComponent,
+    component: FactoryListComponent,
     children: [
+      {
+        path: '',
+        component: FactoriesComponent,
+      },
       {
         path: ':id',
         component: FactoryComponent,
@@ -22,4 +28,4 @@ const routes: Routes = [
 })
 export class FactoriesRoutingModule { }
 
-export const routedComponents = [FactoryComponent, FactoriesComponent];
+export const routedComponents = [FactoryComponent, FactoriesComponent, FactoryListComponent];
