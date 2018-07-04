@@ -33,6 +33,13 @@
             "scripts": []
           },
           "configurations": {
+            "nb": {
+            "aot": true,
+            "outputPath": "dist/nebb-angular-course-nb/",
+            "i18nFile": "src/locale/messages.nb.xlf",
+            "i18nFormat": "xlf",
+            "i18nLocale": "nb"
+            },
             "production": {
               "fileReplacements": [
                 {

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -9,6 +9,10 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { registerLocaleData } from '@angular/common';
+import localeNb from '@angular/common/locales/nb';
+
+registerLocaleData(localeNb, 'nb');
 
 @NgModule({
   declarations: [
@@ -25,6 +29,10 @@ import { DashboardModule } from './dashboard/dashboard.module';
     DashboardModule,
     CoreModule
   ],
+  providers: [ { provide: LOCALE_ID, useValue: 'nb' } ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+
+ }
