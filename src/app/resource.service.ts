@@ -5,7 +5,7 @@ import { Serializer } from './serializer';
 import { catchError, tap } from 'rxjs/operators';
 import { QueryOptions } from './query-options';
 
-export class ResourceService<T extends Resource> {
+export abstract class ResourceService<T extends Resource> {
   constructor(
     private httpClient: HttpClient,
     private url: string,
