@@ -22,7 +22,7 @@ import { SharedModule } from '../shared/shared.module';
     SharedModule
   ],
   exports: [
-    CommonModule, FormsModule, RouterModule, FooterComponent, HeaderComponent, LeftMenuComponent
+    FooterComponent, HeaderComponent, LeftMenuComponent
   ],
   declarations: [ FooterComponent, HeaderComponent, LeftMenuComponent],
   providers: [SelectivePreloadingStrategy]

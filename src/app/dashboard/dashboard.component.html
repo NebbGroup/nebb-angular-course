@@ -1,5 +1,5 @@
 <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
-  <h1>Dashboard</h1>
+  <h1>{{ 'Dashboard' | translate }}</h1>
   <section class="row text-center placeholders">
     <div *ngFor="let factory of factories" class="col-6 col-sm-3 placeholder">
       <nebb-dashboard-item *ngIf=factory [factory]=factory></nebb-dashboard-item>
