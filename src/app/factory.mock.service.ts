@@ -1,6 +1,7 @@
-import { QueryOptions } from 'nebb-rest-service';
+
 import { Observable, of } from 'rxjs';
 import { Factory } from './factory';
+import { QueryOptions } from 'src/app/query-options';
 
 export class FactoryMockService {
 
