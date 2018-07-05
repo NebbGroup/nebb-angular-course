@@ -14,7 +14,8 @@ export class FactoriesComponent implements OnInit {
 
   ngOnInit() {
     this.factories = [];
-    this.factoryService.list(new QueryOptions()).subscribe(factories => {
+    this.factoryService.listCached(new QueryOptions()).subscribe(factories => {
+      console.log('factory sub');
       for (const factory of factories) {
         this.factories.push(new Factory(factory));
       }

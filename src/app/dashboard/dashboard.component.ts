@@ -15,9 +15,10 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.factories = [];
-    this.factoryService.list(new QueryOptions()).subscribe(factories => {
+    this.factoryService.listCached(new QueryOptions()).subscribe(factories => {
+      console.log('dashboard sub');
       for (const factory of factories) {
-         this.factories.push(new Factory(factory));
+        this.factories.push(new Factory(factory));
       }
     });
   }
